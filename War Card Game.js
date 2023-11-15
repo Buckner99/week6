@@ -1,11 +1,10 @@
-//values that I had no idea how to do so made them into arrays
+
 const cardSuits= ["♠", "♣", "♥", "♦"]
 const cardValues = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-// const player1Points= []
-// const player2Points= []
+
 let playerSum = 0;
 
-//classes that i used for Cards,Deck,Player
+//classes that I used for Cards, Deck, Player.
 class Deck {
     constructor(cards = deckShuffled()){
         this.cards = cards
@@ -15,15 +14,7 @@ class Deck {
         return this.cards.length
     }
 
-    // pop(){
-    //     return this.cards.shift()
-    // }
 
-
-    //  push(card){
-    //      this.cards.push(card)
-    //  }
-    
 
    shuffle() {
     for (let i = this.numberOfCards - 1; i > 0; i--) {
@@ -42,12 +33,7 @@ class Card {
     }
 }
 
-// class Player {
-//     constructor(player1, player2){
-//         this.player1 = player1
-//         this.player2 = player2
-//     }
-// }
+
 class Player {
     constructor(name){
         this.name = name,
@@ -65,7 +51,7 @@ function deckShuffled(){
 }
 
 //cards are being handed out with 26 per player
-//startWar()
+
 function startWar(){
 const newShoot = new Deck()
 newShoot.shuffle()
